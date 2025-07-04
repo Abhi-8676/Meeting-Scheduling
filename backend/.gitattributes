@@ -1,0 +1,5 @@
+* text=auto
+*.js diff=javascript
+*.json diff=json
+*.md diff=markdown
+*.webm filter=lfs diff=lfs merge=lfs -text
