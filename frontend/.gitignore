@@ -19,3 +19,4 @@ yarn-error.log*
 .vscode/
 # hide webm files
 *.webm
+.vercel
