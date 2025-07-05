@@ -97,7 +97,7 @@ import React, { useState, useEffect } from "react";
 import { uploadRecording, getSummary, summarizeTranscriptText } from "../services/mediaService";
 import { useTheme } from "./ThemeContext";
 import axios from "axios";
-const API = import.meta.env.VITE_GATEWAY_API_URL || "http://localhost:4003/api";
+const API = import.meta.env.VITE_Media_API_URL || "http://localhost:4003/api";
 
 // Theme helpers
 function getBgColor(theme) {
