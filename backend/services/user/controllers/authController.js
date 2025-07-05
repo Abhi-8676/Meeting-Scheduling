@@ -5,7 +5,7 @@ exports.googleAuthCallback = (req, res) => {
     // Ensure req.user is populated by your passport strategy
     if (!req.user) {
       return res.redirect(
-        `${process.env.CLIENT_URL || "http://localhost:5173"}/login?error=OAuthFailed`
+        `${process.env.CLIENT_URL || "*"}/login?error=OAuthFailed`
       );
     }
 
@@ -16,7 +16,7 @@ exports.googleAuthCallback = (req, res) => {
       { expiresIn: "1h" }
     );
 
-    const clientUrl = process.env.CLIENT_URL || "http://localhost:5173";
+    const clientUrl = process.env.CLIENT_URL || "*";
 
     // Option 1: Redirect with token in query parameter (simple, less secure)
     res.redirect(
@@ -39,7 +39,7 @@ exports.googleAuthCallback = (req, res) => {
   } catch (error) {
     console.error("OAuth callback error:", error);
     res.redirect(
-      `${process.env.CLIENT_URL || "http://localhost:5173"}/login?error=ServerError`
+      `${process.env.CLIENT_URL || "*"}/login?error=ServerError`
     );
   }
 };
