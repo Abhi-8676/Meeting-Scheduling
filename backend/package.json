@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"npm run build",
     "start:gateway": "cd gateway && node app.js",
     "start:user": "cd services/user && node app.js",
     "start:chat": "cd services/chat && node app.js",
